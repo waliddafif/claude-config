@@ -1,1 +1,0 @@
-/home/user/Documents/my-standards/commands/new-feature.md

@@ -29,5 +29,8 @@ context/
 firebase-debug.log
 security_warnings_state_*.json
 
+# Symlinks (recreated by setup.sh)
+commands/
+
 # OS
 .DS_Store
