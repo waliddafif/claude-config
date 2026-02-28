@@ -1,0 +1,59 @@
+{
+  "env": {
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "40000",
+    "DISABLE_PROMPT_CACHING": "0",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+    "ENABLE_TOOL_SEARCH": "auto:5"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(pytest:*)",
+      "Bash(source:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(git show:*)",
+      "Bash(python3:*)",
+      "Bash(pip install:*)",
+      "Bash(.venv/bin/pip install:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(gcloud run services describe:*)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(npm run dev:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(tree:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(npx tsc:*)",
+      "Bash(gcloud run services logs read:*)",
+      "Bash(gcloud sql connect:*)",
+      "Bash(python -m alembic revision:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: implement all admin UI enhancements \\(infinite scroll, sorting, PDF export, notifications, audit trail\\)\n\nFEATURES IMPLEMENTED:\n\n1. Infinite Scroll\n   - Add useInfiniteScroll hook with IntersectionObserver\n   - Add BackToTop component with smooth scroll\n   - Integrate in calls page replacing pagination\n   - Performance optimized with proper memoization\n\n2. Column Sorting\n   - Add useTableSort hook supporting asc/desc/null states\n   - Support for dates, numbers, strings\n   - Visual indicators \\(↑ ↓ ⇅\\) in table headers\n   - Clickable headers with hover states\n\n3. PDF Dashboard Export\n   - Add exportDashboardPDF utility using jspdf + html2canvas\n   - Export button in dashboard with keyboard shortcut \\(p\\)\n   - Captures KPIs, charts, and metadata\n   - Professional multi-page layout\n\n4. Toast Notifications for New Calls\n   - Add useNewCallsNotifications hook with polling \\(30s\\)\n   - Global integration in app layout\n   - Toast shows: number, outcome, \"View\" action\n   - Uses Sonner for consistent UI\n\n5. Audit Trail System\n   - Backend: AuditLog model + AuditService + API endpoints\n   - Frontend: Complete UI with filters \\(action, resource, user, dates\\)\n   - Pagination \\(50 logs/page\\)\n   - Detail modal with full context\n   - SQL migration included\n\nTECHNICAL DETAILS:\n- 15 files created/modified\n- 3 reusable hooks\n- Build passes \\(✓\\)\n- TypeScript strict mode\n- Performance optimized\n- Accessibility maintained\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(wc:*)",
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(ls:*)",
+      "mcp__plugin_sentry_sentry__*",
+      "mcp__playwright__*"
+    ]
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "firebase@claude-plugins-official": true,
+    "stripe@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "semgrep@claude-plugins-official": true,
+    "sentry@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "greptile@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "hookify@claude-plugins-official": true
+  }
+}

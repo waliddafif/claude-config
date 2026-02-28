@@ -1,0 +1,1 @@
+/home/user/Documents/my-standards/commands/deploy.md

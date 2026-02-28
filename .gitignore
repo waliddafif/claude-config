@@ -1,0 +1,33 @@
+# Credentials & secrets
+.credentials.json
+
+# Session data
+history.jsonl
+projects/
+session-env/
+file-history/
+shell-snapshots/
+paste-cache/
+plans/
+tasks/
+todos/
+debug/
+backups/
+archive/
+downloads/
+ide/
+
+# Cache & analytics
+cache/
+stats-cache.json
+statsig/
+telemetry/
+
+# Runtime
+plugins/
+context/
+firebase-debug.log
+security_warnings_state_*.json
+
+# OS
+.DS_Store
