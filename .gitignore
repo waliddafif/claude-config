@@ -32,5 +32,9 @@ security_warnings_state_*.json
 # Symlinks (recreated by setup.sh)
 commands/
 
+# Backups & caches
+mcp-needs-auth-cache.json
+*.bak
+
 # OS
 .DS_Store
