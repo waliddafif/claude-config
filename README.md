@@ -42,7 +42,7 @@ git clone my-standards ~/Documents/my-standards
 |-------|-------------|
 | `dev-workflow` | Best practices de workflow Claude Code |
 | `pr-ready` | Vérification complète avant PR |
-| `project-init` | Scaffolding de nouveaux projets |
+| `project-init` | Scaffolding de nouveaux projets (nextjs, nextjs-saas, python-fastapi, bun-saas-ai) |
 | `security-audit` | Audit de sécurité OWASP |
 | `standards-enforcer` | Enforcement automatique des standards de code |
 | `techdebt` | Nettoyage dette technique en fin de session |
@@ -93,3 +93,4 @@ To regenerate zips from source:
 ## Related
 
 - [my-standards](https://github.com/waliddafif/my-standards) — coding rules, CLAUDE.md, commands
+- [saas-ai-template](https://github.com/waliddafif/saas-ai-template) — Bun/Elysia/React SaaS AI starter (used by `project-init`)
