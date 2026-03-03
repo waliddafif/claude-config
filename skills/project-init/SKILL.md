@@ -1,6 +1,6 @@
 ---
 name: project-init
-description: Initialise un nouveau projet à partir des templates standards (nextjs, nextjs-saas, python-fastapi). Use when user says "nouveau projet", "init project", "créer un projet", "bootstrap", "scaffolder".
+description: Initialise un nouveau projet à partir des templates standards (nextjs, nextjs-saas, python-fastapi, bun-saas-ai). Use when user says "nouveau projet", "init project", "créer un projet", "bootstrap", "scaffolder".
 disable-model-invocation: true
 argument-hint: [template] [project-name]
 ---
@@ -16,6 +16,7 @@ Initialise un nouveau projet à partir des templates dans `~/Documents/my-standa
 | `nextjs` | Next.js, TypeScript, Tailwind |
 | `nextjs-saas` | Next.js, TypeScript, Tailwind, Auth (Supabase/Firebase), shadcn/ui |
 | `python-fastapi` | Python 3.12, FastAPI, SQLAlchemy async, PostgreSQL |
+| `bun-saas-ai` | Bun, Elysia, React 19, Tailwind v4, shadcn/ui, assistant-ui, Vercel AI SDK, Better Auth, Drizzle, pgvector |
 
 ## Instructions
 
@@ -39,6 +40,12 @@ Avant de copier, utiliser WebSearch pour vérifier les dernières best practices
 - Rechercher la dernière version stable de FastAPI et ses nouveautés
 - Vérifier les versions de SQLAlchemy, Pydantic (v1 vs v2), uvicorn
 - Vérifier les recommandations actuelles pour la structure de projet
+
+**Si bun-saas-ai :**
+- Rechercher les dernières versions de : Elysia, Better Auth, Drizzle ORM, Vercel AI SDK (`ai`), `@ai-sdk/openai`, `@ai-sdk/anthropic`
+- Vérifier les versions de : Tailwind CSS v4, shadcn/ui, assistant-ui, React, Vite
+- Vérifier les breaking changes de Better Auth (1.x → 2.x?) et AI SDK (v6 → v7?)
+- Vérifier les recommandations Bun runtime (version minimum, bugs connus)
 
 **Pour tous les templates :**
 - Comparer les versions du template local avec les dernières versions stables
@@ -68,8 +75,19 @@ Demander confirmation avant de continuer. Si l'utilisateur valide les mises à j
 
 1. Vérifier que le répertoire `$1` n'existe pas déjà
 2. Créer le répertoire `$1`
-3. Copier le contenu du template : `cp -r ~/Documents/my-standards/template/$0/* ./$1/`
-4. Copier les fichiers communs :
+3. **Si `bun-saas-ai`** : Cloner le repo GitHub et nettoyer le git :
+   ```bash
+   git clone https://github.com/waliddafif/saas-ai-template.git ./$1
+   rm -rf ./$1/.git
+   ```
+   Puis renommer les références dans les `package.json` :
+   - `saas-ai-template` → `$1`
+   - `@saas-ai-template/*` → `@$1/*`
+   - Mettre à jour le titre dans `index.html`, `AppLayout.tsx`, `README.md`
+
+   **Sinon (autres templates)** : Copier depuis les templates locaux :
+   - `cp -r ~/Documents/my-standards/template/$0/* ./$1/`
+4. Copier les fichiers communs (sauf pour `bun-saas-ai` qui les inclut déjà) :
    - `cp -r ~/Documents/my-standards/template/.github ./$1/`
    - `cp ~/Documents/my-standards/template/.gitignore ./$1/`
    - `cp ~/Documents/my-standards/template/CLAUDE.md ./$1/CLAUDE.md`
@@ -117,6 +135,15 @@ pip install -e ".[dev]"
 ```bash
 npm install
 ```
+
+**Si bun-saas-ai :**
+```bash
+bun install
+```
+Puis rappeler à l'utilisateur :
+- Copier `.env.example` → `.env` et remplir `DATABASE_URL`, `BETTER_AUTH_SECRET`, `OPENAI_API_KEY`
+- Créer la DB PostgreSQL et lancer `bun run db:generate && bun run db:migrate`
+- Lancer avec `bun run dev:api`, `bun run dev:web`, `bun run dev:worker`
 
 ### Step 8 : Résumé
 
