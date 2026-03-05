@@ -57,7 +57,6 @@
       }
     ]
   },
-  "outputStyle": "concise - direct and minimal, code-focused. When user says 'explain', switch to detailed mode with reasoning and tradeoffs.",
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
@@ -72,5 +71,14 @@
     "context7@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
     "hookify@claude-plugins-official": true
+  },
+  "outputStyle": "concise - direct and minimal, code-focused. When user says 'explain', switch to detailed mode with reasoning and tradeoffs.",
+  "plansDirectory": "plans",
+  "worktree": {
+    "symlinkDirectories": ["node_modules", ".next", ".cache"]
+  },
+  "spinnerVerbs": {
+    "mode": "append",
+    "verbs": ["Architecting", "Auditing", "Migrating", "Orchestrating", "Refactoring", "Securing"]
   }
 }
