@@ -39,10 +39,7 @@
       "mcp__plugin_sentry_sentry__*",
       "mcp__playwright__*"
     ],
-    "deny": [
-      "mcp__claude_ai_Gmail__*",
-      "mcp__claude_ai_Google_Calendar__*"
-    ]
+    "deny": []
   },
   "hooks": {
     "PreToolUse": [
@@ -55,6 +52,13 @@
           }
         ]
       }
+    ]
+  },
+  "worktree": {
+    "symlinkDirectories": [
+      "node_modules",
+      ".next",
+      ".cache"
     ]
   },
   "enabledPlugins": {
@@ -73,12 +77,17 @@
     "hookify@claude-plugins-official": true
   },
   "outputStyle": "concise - direct and minimal, code-focused. When user says 'explain', switch to detailed mode with reasoning and tradeoffs.",
-  "plansDirectory": "plans",
-  "worktree": {
-    "symlinkDirectories": ["node_modules", ".next", ".cache"]
-  },
   "spinnerVerbs": {
     "mode": "append",
-    "verbs": ["Architecting", "Auditing", "Migrating", "Orchestrating", "Refactoring", "Securing"]
-  }
+    "verbs": [
+      "Architecting",
+      "Auditing",
+      "Migrating",
+      "Orchestrating",
+      "Refactoring",
+      "Securing"
+    ]
+  },
+  "effortLevel": "medium",
+  "plansDirectory": "plans"
 }
