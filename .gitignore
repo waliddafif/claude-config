@@ -38,3 +38,4 @@ mcp-needs-auth-cache.json
 
 # OS
 .DS_Store
+.aider*

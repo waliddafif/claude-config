@@ -37,7 +37,8 @@
       "Bash(pkill:*)",
       "Bash(ls:*)",
       "mcp__plugin_sentry_sentry__*",
-      "mcp__playwright__*"
+      "mcp__playwright__*",
+      "mcp__chrome-devtools__*"
     ],
     "deny": []
   },
@@ -64,12 +65,12 @@
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": false,
     "github@claude-plugins-official": true,
     "stripe@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
-    "semgrep@claude-plugins-official": true,
+    "semgrep@claude-plugins-official": false,
     "sentry@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
@@ -89,5 +90,6 @@
     ]
   },
   "effortLevel": "medium",
-  "plansDirectory": "plans"
+  "plansDirectory": "plans",
+  "voiceEnabled": true
 }
